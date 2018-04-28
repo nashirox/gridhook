@@ -22,7 +22,7 @@ module Gridhook
     attr_reader :attributes
 
     def initialize(attributes)
-      @attributes = attributes.with_indifferent_access
+      @attributes = attributes.to_unsafe_h
     end
 
     # An alias for returning the type of this event, ie:
